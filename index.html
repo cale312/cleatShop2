@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="handlebars-v4.0.5.js"></script>
+    
+    <head>
+        <h1>Drop Down Tester</h1>
+    </head>
+    
+    <body>
+        <div class="display"></div>
+        <br/>
+        <input type="text" placeholder="Enter Name" class="name-searcher">
+        <br/>
+        <input type="button" value="Search" class="search-btn">
+        <br/>
+        <br/>
+        <input type="text" placeholder="Name" class="add-name">
+        <br/>
+        <br/>
+        <input type="button" value="add" class="add-btn">
+        <br/>
+        <br/>
+        <input type="button" value="showNames" class="showNames-btn">
+        <br/>
+        <br/>
+        <div class="tableDisplay"></div>
+    </body>
+    
+    <script class="myTemplate" type="text/x-handlebars">
+        <select class="dropDown">
+            {{#each nameList}}
+            <option class="{{className}}">{{name}}</option>
+            {{/each}}
+        </select>
+    </script>
+    <script class="drop-down" type="text/x-handlebars">
+        <table align='center' border="2">
+            <tr>
+                <th>Name</th>
+                <th>Class Name</th>
+            </tr>
+            <tr>
+                <td class='{{name}}'>{{name}}</td>
+                <td class='{{className}}'>{{className}}</td>
+            </tr>
+        </table>
+    </script>
+    <script class="newTemplate" type="text/x-handlebars">
+        <table align='center' border="2">
+            <tr>
+                <th>Name</th>
+                <th>Class Name</th>
+            </tr>
+            {{#each data}}
+            <tr>
+                <td class='{{name}}'>{{name}}</td>
+                <td class='{{className}}'>{{className}}</td>
+            </tr>
+            {{/each}}
+        </table>
+    </script>
+    
+    <script src="app.js" charset="utf-8"></script>
+    
+</html>
