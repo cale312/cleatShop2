@@ -1,0 +1,7 @@
+body {background: red}
+h1 {text-align: center;}
+body {text-align: center;}
+.add-name, .names {text-transform: capitalize; text-align: center}
+td, th, table {width: 500px; background: white}
+.classNames {text-transform: lowercase}
+.name-searcher {text-align: center; text-transform: capitalize}
